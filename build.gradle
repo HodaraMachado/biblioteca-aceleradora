@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'application'
+
+mainClassName = "com.aceleradora.biblioteca.Main"
+
+group 'com.aceleradora'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
+}
